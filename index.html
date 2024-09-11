@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منظومة ادارة منتجات</title>
+    <link rel="stylesheet" href="abdo.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>محل الجعفري للغذائية </h2>
+        <p>PRODUCT MANAGEMENT  SYSTEM</p>
+      </div>
+
+      <div class="inputs">
+        <input placeholder="أسم المنتج" type="text" id="title" />
+        <div class="price">
+          <input onkeyup="getTotal()" placeholder="السعر" type="number" id="price" />
+          <input onkeyup="getTotal()" placeholder="الكمية" type="number" id="abdo" />
+          <input onkeyup="getTotal()" placeholder="الأعلانات" type="number" id="ads" />
+          <input onkeyup="getTotal()" placeholder="سعر التخفيض" type="number" id="discount" />
+          <br>
+          <small  id="Total"></small>
+        </div>
+        <input placeholder="عدد المنتج" type="number" id="count" />
+        <input placeholder="الوصف" type="text" id="category" />
+
+        <button id="submit">إضافة</button>
+      </div>
+
+      <div class="outputs">
+        <div class="searchblock">
+          <input onkeyup="sarchData(this.value)" placeholder="بحث" type="text" id="search" />
+          <div class="btnsearch">
+            <button onclick="getSearchMood(this.id)" id="searchTitle">بحث بأسم المنتج</button>
+            <button onclick="getSearchMood(this.id)" id="searchCategory">بحث بمواصفات المنتج</button>
+          </div>
+        </div>
+        <div  id="deleteAll">
+
+        </div>
+        <table>
+          <tr>
+            <th>رقم</th>
+            <th>اسم المنتج</th>
+            <th>سعر الوحدة</th>
+            <th>الكمية</th>
+            <th>الاعلانات</th>
+            <th>سعر التخفيض بالدينار</th>
+            <th>السعر الأجمالي</th>
+            <th>الوصف</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody">
+          
+          </tbody>
+        </table>
+      </div>
+    </div>
+   <div class="copyright-text">
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This SYSTEM is made  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#" target="_blank">abdasalam mhara</a>
+   
+   </div>
+    <script src="abdo.js"></script>
+  </body>
+</html>
